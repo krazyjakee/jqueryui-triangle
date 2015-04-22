@@ -1,0 +1,21 @@
+{
+  "name": "jqueryui-triangle",
+  "version": "0.0.1",
+  "authors": [
+    "Jake Cattrall <krazyjakee@gmail.com>"
+  ],
+  "description": "A triangle slider for jQuery-UI",
+  "main": "jqueryui-triangle.min.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "jqueryui": "latest"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQueryUI Triangle</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/jqueryui/themes/black-tie/theme.css" />
+    <link rel="stylesheet" href="jqueryui-triangle.css" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jqueryui/jquery-ui.min.js"></script>
+    <script src="jqueryui-triangle.js"></script>
+    <script>
+
+    var setSliders = function(id, values){
+        var elems = $('#'+id).find('.progress');
+        for(var i = 0; i <= values.corners.length - 1; i++){
+            value = values.corners[i] + '%';
+            $(elems[i]).find('.progress-bar').css('width', value).find('span').html(value);
+        }
+    }
+
+    $(window).ready(function() {
+        $('#triangle').triangle({
+            colors: true,
+            callback: function(values){ setSliders('triangleSliders', values); }
+        });
+        $('#triangle2').triangle({
+            callback: function(values){ setSliders('triangleSliders2', values); }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="triangle"></div>
+            </div>
+            <div class="col-sm-8" id="triangleSliders">
+                <br />
+                <br />
+                <br />
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="triangle2"></div>
+            </div>
+            <div class="col-sm-8" id="triangleSliders2">
+                <br />
+                <br />
+                <br />
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width:50%;">
+                        <span>50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

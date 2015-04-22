@@ -1,0 +1,58 @@
+.ui-triangle-container {
+    width: 340px;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ui-triangle {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: #bbb;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    top: 48%;
+    left: 0;
+    overflow: hidden;
+}
+.ui-triangle-corner{
+    width: 260px;
+    height: 260px;
+    border-radius: 130px;
+    position: absolute;
+    transform: skew(50deg,-50deg);
+}
+.ui-triangle-corner-top{
+    top: 0;
+    left: 0;
+    background: linear-gradient(184deg, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 55%);
+}
+.ui-triangle-corner-left{
+    top: 0;
+    right: 0;
+    background: linear-gradient(-45deg, rgba(0,255,0,1) 0%,rgba(255,255,255,0) 70%);
+}
+.ui-triangle-corner-right{
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(0,0,255,1) 0%,rgba(255,255,255,0) 70%);
+}
+.ui-triangle-pin-container{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    margin-top: 0%;
+    position: relative;
+}
+.ui-triangle-pin{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 47%;
+    top: 50%;
+    margin-left: -10px;
+}
